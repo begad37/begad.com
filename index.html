@@ -13,13 +13,12 @@
       font-family: 'Arial', sans-serif;
     }
 
-    /* خلفية متحركة */
+    /* الخلفية */
     body {
       direction: rtl;
       text-align: center;
-      background: linear-gradient(-45deg, #ff6a00, #ee0979, #ff6a00, #00b4d8);
-      background-size: 400% 400%;
-      animation: backgroundAnimation 15s ease infinite;
+      background: url('https://i.postimg.cc/wB7x3QRn/bddd5a58bd490ee9070111a547d4589a.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: white;
       display: flex;
       justify-content: center;
@@ -28,39 +27,25 @@
       flex-direction: column;
     }
 
-    /* تأثير حركة الخلفية */
-    @keyframes backgroundAnimation {
-      0% { background-position: 0% 50%; }
-      25% { background-position: 100% 50%; }
-      50% { background-position: 0% 50%; }
-      75% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    /* حاوية بتأثير زجاجي فاخر */
+    /* الحاوية بتأثير زجاجي */
     .container {
       background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(15px);
+      backdrop-filter: blur(5px);
       padding: 30px;
       border-radius: 15px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
       max-width: 500px;
       width: 90%;
-      animation: fadeIn 1.5s ease-in-out;
-      border: 2px solid rgba(255, 255, 255, 0.3);
+      border: 2px solid rgba(255, 255, 255, 0.2);
     }
 
-    /* تحريك دخول العنوان */
-    h1 {
-      font-size: 30px;
-      margin-bottom: 20px;
-      background: linear-gradient(90deg, #ff6a00, #ee0979);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: slideIn 1.5s ease-in-out;
+    /* اللوجو */
+    .logo {
+      width: 150px;
+      margin-bottom: 30px;
     }
 
-    /* تأثير الأزرار */
+    /* الأزرار مع لون متناسق مع اللوجو */
     .button {
       display: block;
       width: 100%;
@@ -69,7 +54,6 @@
       font-size: 20px;
       font-weight: bold;
       text-transform: uppercase;
-      background: linear-gradient(45deg, #ff6a00, #ee0979);
       color: white;
       text-align: center;
       border: none;
@@ -77,70 +61,41 @@
       cursor: pointer;
       text-decoration: none;
       transition: all 0.3s ease-in-out;
-      box-shadow: 0 4px 10px rgba(255, 106, 0, 0.6);
+      box-shadow: 0 4px 10px rgba(0, 150, 136, 0.6);
       position: relative;
       overflow: hidden;
+      background: linear-gradient(270deg, #00695c, #009688, #004d40); /* تناسق مع اللوجو */
+      background-size: 400% 400%;
+      animation: buttonAnimation 5s infinite linear;
     }
 
-    /* تأثير الإضاءة للأزرار */
-    .button::before {
-      content: "";
-      position: absolute;
-      top: -100%;
-      left: -100%;
-      width: 300%;
-      height: 300%;
-      background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
-      transition: all 0.5s ease-in-out;
+    /* تحريك لون الخلفية للأزرار */
+    @keyframes buttonAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
-    .button:hover::before {
-      top: 0;
-      left: 0;
-    }
-
-    /* تأثير التوهج عند تمرير الماوس */
+    /* تأثير عند تمرير الماوس */
     .button:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 25px rgba(255, 106, 0, 0.9);
+      box-shadow: 0 0 25px rgba(0, 150, 136, 0.9);
     }
 
-    /* تأثير النبض عند الضغط */
+    /* تأثير عند الضغط */
     .button:active {
       transform: scale(0.95);
-      box-shadow: 0 0 30px rgba(255, 106, 0, 1);
+      box-shadow: 0 0 30px rgba(0, 150, 136, 1);
     }
 
-    /* تحريك العنوان */
-    @keyframes slideIn {
-      from {
-        opacity: 0;
-        transform: translateY(-30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* تحريك دخول الصفحة */
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-
-    /* إضافة شعارات داخل الأزرار */
+    /* الشعارات داخل الأزرار */
     .button img {
       width: 30px;
       margin-left: 10px;
       vertical-align: middle;
     }
 
-    /* إضافة حقوق النشر */
+    /* حقوق النشر */
     .copyright {
       position: absolute;
       bottom: 10px;
@@ -151,19 +106,12 @@
       opacity: 0.7;
     }
 
-    /* لتعديل الصورة */
-    .logo {
-      width: 150px;
-      margin-bottom: 30px;
-    }
-
   </style>
 </head>
 <body>
 
   <div class="container">
-    <!-- إضافة الصورة بدلاً من النص BEGAD -->
-    <img src="https://i.postimg.cc/nhbrywL9/Picsart-25-02-11-16-33-37-341.png" alt="Logo" class="logo">
+    <img src="https://i.postimg.cc/kXBT1V8q/Picsart-25-02-11-20-28-56-833.png" alt="Logo" class="logo">
     
     <a href="https://www.facebook.com/share/1DNPBm8BkD/" class="button">
       <span>Facebook</span>
@@ -181,9 +129,8 @@
     </a>
   </div>
 
-  <!-- حقوق النشر -->
   <div class="copyright">
-    <p>&copy; 2025 BEGAD. جميع الحقوق محفوظة.</p>
+    <p>&copy; 2025-2-11/1225- BEGAD. جميع الحقوق محفوظة.</p>
   </div>
 
 </body>
