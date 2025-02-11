@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxury Interactive Page</title>
+  <style>
+    /* إعدادات عامة */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* خلفية متحركة */
+    body {
+      direction: rtl;
+      text-align: center;
+      background: linear-gradient(-45deg, #ff6a00, #ee0979, #ff6a00, #00b4d8);
+      background-size: 400% 400%;
+      animation: backgroundAnimation 15s ease infinite;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    /* تأثير حركة الخلفية */
+    @keyframes backgroundAnimation {
+      0% { background-position: 0% 50%; }
+      25% { background-position: 100% 50%; }
+      50% { background-position: 0% 50%; }
+      75% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* حاوية بتأثير زجاجي فاخر */
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      max-width: 500px;
+      width: 90%;
+      animation: fadeIn 1.5s ease-in-out;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    /* تحريك دخول العنوان */
+    h1 {
+      font-size: 30px;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, #ff6a00, #ee0979);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: slideIn 1.5s ease-in-out;
+    }
+
+    /* تأثير الأزرار */
+    .button {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      background: linear-gradient(45deg, #ff6a00, #ee0979);
+      color: white;
+      text-align: center;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 4px 10px rgba(255, 106, 0, 0.6);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* تأثير الإضاءة للأزرار */
+    .button::before {
+      content: "";
+      position: absolute;
+      top: -100%;
+      left: -100%;
+      width: 300%;
+      height: 300%;
+      background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+      transition: all 0.5s ease-in-out;
+    }
+
+    .button:hover::before {
+      top: 0;
+      left: 0;
+    }
+
+    /* تأثير التوهج عند تمرير الماوس */
+    .button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255, 106, 0, 0.9);
+    }
+
+    /* تأثير النبض عند الضغط */
+    .button:active {
+      transform: scale(0.95);
+      box-shadow: 0 0 30px rgba(255, 106, 0, 1);
+    }
+
+    /* تحريك العنوان */
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* تحريك دخول الصفحة */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* إضافة شعارات داخل الأزرار */
+    .button img {
+      width: 30px;
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+
+    /* إضافة حقوق النشر */
+    .copyright {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      font-size: 14px;
+      color: white;
+      opacity: 0.7;
+    }
+
+    /* لتعديل الصورة */
+    .logo {
+      width: 150px;
+      margin-bottom: 30px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- إضافة الصورة بدلاً من النص BEGAD -->
+    <img src="https://i.postimg.cc/nhbrywL9/Picsart-25-02-11-16-33-37-341.png" alt="Logo" class="logo">
+    
+    <a href="https://www.facebook.com/share/1DNPBm8BkD/" class="button">
+      <span>Facebook</span>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo">
+    </a>
+    
+    <a href="https://www.instagram.com/begad_12?igsh=ZHQ1Mmh4ZzQwcDVj" class="button">
+      <span>Instagram</span>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram Logo">
+    </a>
+    
+    <a href="https://www.tiktok.com/@1b9.h?_t=ZS-8tpPIh8zWQ4&_r=1" class="button">
+      <span>TikTok</span>
+      <img src="https://i.postimg.cc/j21pp9QW/Picsart-25-02-11-17-19-15-114.png" alt="TikTok Logo">
+    </a>
+  </div>
+
+  <!-- حقوق النشر -->
+  <div class="copyright">
+    <p>&copy; 2025 BEGAD. جميع الحقوق محفوظة.</p>
+  </div>
+
+</body>
+</html>
