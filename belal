@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxury Interactive Page</title>
+  <style>
+    /* إعدادات عامة */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* خلفية الموقع */
+    body {
+      direction: rtl;
+      text-align: center;
+      background: url('https://i.postimg.cc/6pDtF75W/f91909a6bfda7433dc7387e5fcc4327e.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      position: relative;
+    }
+
+    /* تأثير التمويه للخلفية */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: inherit;
+      filter: blur(5px); /* تقليل التمويه قليلاً */
+      z-index: -1;
+    }
+
+    /* حاوية بتأثير زجاجي */
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      max-width: 500px;
+      width: 90%;
+      animation: fadeIn 1.5s ease-in-out;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    /* تحريك دخول الصفحة */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* تأثير الأزرار */
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      background: linear-gradient(45deg, #ff6a00, #ee0979);
+      color: white;
+      text-align: center;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 4px 10px rgba(255, 106, 0, 0.6);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* تنسيق أيقونات الأزرار */
+    .button img {
+      width: 30px;
+      margin-right: 10px;
+    }
+
+    /* تأثيرات عند التفاعل */
+    .button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255, 106, 0, 0.9);
+    }
+
+    .button:active {
+      transform: scale(0.95);
+      box-shadow: 0 0 30px rgba(255, 106, 0, 1);
+    }
+
+    /* إضافة حقوق النشر */
+    .copyright {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      font-size: 14px;
+      color: white;
+      opacity: 0.7;
+    }
+
+    /* تحسين استجابة الموقع للهواتف */
+    @media (max-width: 480px) {
+      .button {
+        font-size: 16px;
+        padding: 12px;
+      }
+      .logo {
+        width: 120px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- إضافة الشعار -->
+    <img src="https://i.postimg.cc/90WW1vXy/Picsart-25-02-11-18-01-26-189.png" alt="Logo" class="logo">
+    
+    <a href="https://www.facebook.com/share/18cfFHWwj8/" class="button">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo">
+      <span>Facebook</span>
+    </a>
+    
+    <a href="https://www.instagram.com/belal_abrahem_?igsh=MXNubzVxMnh0cjEydA==" class="button">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram Logo">
+      <span>Instagram</span>
+    </a>
+    
+    <a href="https://www.tiktok.com/@belal95814?_t=ZS-8tpYxjGDlN2&_r=1" class="button">
+      <img src="https://i.postimg.cc/j21pp9QW/Picsart-25-02-11-17-19-15-114.png" alt="TikTok Logo">
+      <span>TikTok</span>
+    </a>
+  </div>
+
+  <!-- حقوق النشر -->
+  <div class="copyright">
+    <p>&copy; 2025 BEGAD. جميع الحقوق محفوظة.</p>
+  </div>
+
+</body>
+</html>
